@@ -1,0 +1,56 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+debug.log
+
+# PM2 logs and dumps
+pids
+*.pid
+*.pid.lock
+pm2.log
+*.dump
+
+# Build / Distribution
+dist/
+build/
+coverage/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Docker
+.dockerignore
+Dockerfile*
+docker-compose.override.yml
+
+# Misc
+*.orig
+*.rej
+*.zip
+*.tar
+*.tgz
