@@ -1,4 +1,5 @@
 const UserModel = require("../models/patientRegister");
+const encryptPassword = require("../utills/encryption");
 
 exports.postPatient= (req, res, next) => {
     const reqBody = req.body;
@@ -6,7 +7,8 @@ exports.postPatient= (req, res, next) => {
     const userName = reqBody.userName;
     const email = reqBody.email;
     const phNum = reqBody.phNum;
-    const addUser = new UserModel(userName, email, phNum);
+    const password = encryptPassword.encryption;
+    const addUser = new UserModel(userName, email, phNum, password);
     addUser.save()
     .then(response => {
         res.status(201).send(response)

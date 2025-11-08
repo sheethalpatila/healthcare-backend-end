@@ -2,10 +2,11 @@ const getDB = require("../utills/database").getDB;
 const mongodb = require("mongodb")
 
 module.exports = class User {
-    constructor(userName, email, phNum) {
+    constructor(userName, email, phNum, password) {
         this.userName = userName;
         this.email = email;
         this.phNum = phNum;
+        this.password = password;
     }
     save() {
 
@@ -15,7 +16,7 @@ module.exports = class User {
 
     static fetchAll() {
         const db = getDB();
-        return db.collection("users").find().toArray();
+        return db.collection("patients").find().toArray();
     }
 
     static findById(id) {
